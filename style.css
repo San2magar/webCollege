@@ -1,0 +1,258 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  height: auto;
+  width: "100%";
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 16px;
+  text-align: center;
+}
+nav {
+  background-color: orange;
+  overflow: hidden;
+  text-align: right;
+  padding: 14px 12px;
+}
+nav a {
+  text-decoration: none;
+  padding: 14px 16px;
+  color: white;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+nav a:hover {
+  background-color: white;
+  color: orange;
+}
+footer {
+  background-color: orange;
+  color: black;
+  text-align: center;
+}
+
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+section,
+footer {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+section {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Simple Gallery Section */
+.gallery-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 16px 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  background: #f7f7f7;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  transition: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item::after,
+.gallery-item .overlay {
+  display: none !important;
+}
+
+/* Remove lightbox and loader styles for normal mode */
+.gallery-lightbox,
+.gallery-lightbox.active,
+.gallery-lightbox .close-btn,
+.gallery-lightbox .loader,
+.gallery-lightbox .caption {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    padding: 4px 1vw;
+  }
+  .gallery-grid {
+    gap: 8px;
+  }
+  .gallery-item img {
+    height: 90px;
+  }
+}
+
+.column {
+  flex: 25%;
+}
+
+.column.side {
+  flex: 25%;
+  background-color: #ebdfdf;
+}
+
+.column.middle {
+  flex: 40%;
+  background-color: #fefefe;
+}
+
+/* Lightbox HTML Structure */
+.gallery-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s;
+}
+
+.gallery-lightbox.active {
+  display: flex;
+}
+
+.gallery-lightbox .close-btn {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 10001;
+  transition: color 0.2s;
+}
+
+.gallery-lightbox .close-btn:hover {
+  color: #00c6ff;
+}
+
+.gallery-lightbox .loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 10002;
+}
+
+.gallery-lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 123, 255, 0.18);
+  animation: popIn 0.4s;
+}
+
+.gallery-lightbox .caption {
+  color: #fff;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #000;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

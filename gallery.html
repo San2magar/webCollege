@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Examples</title>
+    <style>
+      p {
+        font-family: "Courier New", Courier, monospace;
+        line-height: 1.6;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>OFFICIAL SITE OF HCOE</h1>
+      <h2><marquee>Education for fun</marquee></h2>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="form.html">Contact</a>
+    </nav>
+
+    <section class="gallery-section">
+      <h2>My Photo Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/photo1.jpg" alt="Pic 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo2.jpg" alt="Pic 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo3.jpg" alt="Pic 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo4.jpg" alt="Pic 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo5.jpg" alt="Pic 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo6.jpg" alt="Pic 6" />
+        </div>
+      </div>
+    </section>
+    <p></p>
+    <footer>All Rights reserved @HCOE</footer>
+
+    <div id="galleryLightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightboxImg" />
+      <div id="lightboxCaption" class="caption"></div>
+    </div>
+  </body>
+</html>
