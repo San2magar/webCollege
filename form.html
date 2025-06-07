@@ -27,7 +27,7 @@
     <section class="registration">
       <div class="registration-form">
         <form
-          name="myform"
+          name="myForm"
           action="register.html"
           method="post"
           autocomplete="on"
@@ -85,23 +85,39 @@
             autocomplete="email"
           />
 
-          <button
-            type="submit"
-            style="
-              width: 100%;
-              padding: 10px 0;
-              margin-top: 12px;
-              background: #007bff;
-              color: #fff;
-              border: none;
-              border-radius: 4px;
-              font-size: 1rem;
-              cursor: pointer;
-              transition: background 0.2s;
-            "
-          >
-            Register
-          </button>
+          <label for="photo">Photo</label>
+          <input type="file" name="photo" id="photo" accept="image/*" />
+
+          <fieldset style="border: none; padding: 0; margin-bottom: 16px">
+            <legend style="font-weight: 600; margin-bottom: 6px">
+              Education
+            </legend>
+            <input type="checkbox" name="plus2" id="plus2" value="plus2" />
+            <label for="plus2">10+2</label>
+            <input type="checkbox" name="above" id="above" value="above" />
+            <label for="above">Above</label>
+          </fieldset>
+
+          <label for="remarks">Remarks</label>
+          <textarea
+            id="remarks"
+            name="remarks"
+            rows="3"
+            cols="40"
+            placeholder="Any additional remarks..."
+          ></textarea>
+
+          <div class="form-actions">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+            <button
+              type="button"
+              onclick="window.location.href='index.html'"
+              style="background: #ffdddd; color: #b00"
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       </div>
     </section>

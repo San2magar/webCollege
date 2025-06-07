@@ -105,42 +105,100 @@
   color: #444;
 }
 
-/* Fancy submit button */
+/* Form actions button group */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Style all buttons in the form */
 .registration-form button[type="submit"] {
-  width: 100%;
-  padding: 14px 0;
-  margin-top: 10px;
   background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  padding: 12px 0;
+  width: 100%;
   cursor: pointer;
   box-shadow: 0 2px 12px rgba(0, 123, 255, 0.13);
   letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
   transition: background 0.3s, transform 0.15s, box-shadow 0.2s;
 }
 .registration-form button[type="submit"]:hover {
   background: linear-gradient(90deg, #00c6ff 60%, #007bff 100%);
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: 0 6px 24px rgba(0, 123, 255, 0.18);
 }
-.registration-form button[type="submit"]::after {
-  content: "→";
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.3em;
-  opacity: 0.7;
-  transition: right 0.2s, opacity 0.2s;
+
+.registration-form button[type="reset"] {
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
-.registration-form button[type="submit"]:hover::after {
-  right: 16px;
-  opacity: 1;
+.registration-form button[type="reset"]:hover {
+  background: #e0e0e0;
+  color: #007bff;
+}
+
+.registration-form button[type="button"] {
+  background: #ffdddd;
+  color: #b00;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.registration-form button[type="button"]:hover {
+  background: #ffcccc;
+  color: #fff;
+}
+
+/* Style checkboxes and file input for a modern look */
+.registration-form input[type="checkbox"] {
+  accent-color: #007bff;
+  margin-right: 6px;
+  transform: scale(1.15);
+}
+.registration-form input[type="file"] {
+  border: 1.5px solid #c7d7f5;
+  border-radius: 6px;
+  padding: 8px 6px;
+  background: #f7faff;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.registration-form textarea {
+  width: 100%;
+  border: 1.5px solid #c7d7f5;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  background: #f7faff;
+  margin-bottom: 18px;
+  resize: vertical;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+.registration-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px #cce4ff;
+  background: #fff;
+  outline: none;
 }
 
 /* Responsive */
