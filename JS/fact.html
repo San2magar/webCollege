@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function add() {
+        //alert("hello");
+        let fact = 1;
+        var n = document.getElementById("val").value;
+        if (n <= 0) {
+          fact = 1;
+        } else {
+          for (let i = 1; i < n; i++) {
+            fact *= i;
+          }
+        }
+        document.write("Result of fact is=" + fact);
+        // var x = document.myform.a.value;
+        // var x=document.getElementByName("a").value;
+        // var x=document.getElementByID("b").value;
+        // var y = document.myform.b.value;
+        // x = parseInt(x);
+        // x = parseInt(y);
+        // let z = x + y;
+        // document.myform.ans.value = z;
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="val" />
+    <button onclick="add();">click me</button>
+  </body>
+</html>

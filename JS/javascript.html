@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+      document.write("hello world!!!");
+      var x;
+      var y;
+      let ans;
+      const z = 5;
+      x = 5;
+      y = 6.5;
+      z = "sunil";
+      */
+      function add() {
+        var x = document.myform.a.value;
+        // var x=document.getElementByName("a").value;
+        // var x=document.getElementByID("b").value;
+        // var y = document.myform.b.value;
+        // x = parseInt(x);
+        // x = parseInt(y);
+        // let z = x + y;
+        // document.myform.ans.value = z;
+        for (let i = 1; i <= x; i++) {
+          z = z * i;
+          document.myform.ans.value = z;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myform" action="" method="post">
+      Enter value of a;
+      <input type="text" name="a" id="a" /><br />
+      <input type="button" value="calculate" onclick="add();" />
+      Result
+      <input type="text" id="ans" name="ans" />
+    </form>
+  </body>
+</html>
